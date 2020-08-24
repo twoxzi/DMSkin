@@ -26,7 +26,7 @@ namespace DMSkin.Core
 
         #region UI更新接口
         public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged(string propertyName = null)
+        protected virtual void OnPropertyChanged([System.Runtime.CompilerServices.CallerMemberName]string propertyName = null)
         {
             if (PropertyChanged != null)
                 PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
